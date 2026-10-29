@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Nunito Sans', system-ui, sans-serif;
+  --primary-400: #DD6A6A;
+  --primary-500: #C9402F;
+  --primary-600: #A82E23;
+  --primary-700: #7F211A;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  font-family: var(--font-body);
+  background: #FFFEFC;
+  color: #2A1E18;
+  -webkit-font-smoothing: antialiased;
+}
+
+main:focus {
+  outline: none;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 100;
+  padding: .75rem 1.25rem;
+  border-radius: 9999px;
+  background: var(--primary-600);
+  color: #FFFEFC;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.font-serif-italic {
+  font-family: var(--font-heading);
+  font-style: italic;
+}
+
+.grain {
+  background-image: radial-gradient(circle at 1px 1px, rgba(120, 70, 55, 0.05) 1px, transparent 0);
+  background-size: 22px 22px;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  background: var(--primary-500);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .35s ease;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* Only hide .reveal content once JS has confirmed it can show it again. */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .9s ease, transform .9s ease;
+}
+
+.js .reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+summary {
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.prose-copy h2 {
+  font-family: var(--font-heading);
+  font-size: 1.875rem;
+  color: var(--primary-600);
+  margin-top: 2.5rem;
+}
+
+.prose-copy p,
+.prose-copy ul {
+  margin-top: 1rem;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: #4A382F;
+}
+
+.prose-copy ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.prose-copy li + li {
+  margin-top: .5rem;
+}
+
+.prose-copy a {
+  color: var(--primary-600);
+  text-decoration: underline;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+  }
+}

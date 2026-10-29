@@ -1,2 +1,3 @@
 [build]
-  publish = "."
+  publish = "public"
+  command = "node scripts/build.mjs"

@@ -1,0 +1,9 @@
+{
+  "name": "home-not-alone",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "npx --yes serve public"
+  }
+}

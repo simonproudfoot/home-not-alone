@@ -1,0 +1,278 @@
+{
+  "reportType": "prospect",
+  "url": "https://homenotalone.co.uk",
+  "businessType": "local",
+  "generatedAt": "2026-10-29T14:30:00Z",
+  "pagesAnalyzed": 1,
+  "overallScore": 64,
+
+  "threeVitalThings": {
+    "seo": {
+      "score": 52,
+      "grade": "D",
+      "summary": "The site is a well-designed single page with a good title, canonical tag and HTTPS. But it has only one URL to rank with, no sitemap or robots.txt, no business address, and a mobile load time of over 9 seconds. Google has very little to go on when deciding whether to show Home Not Alone for searches like 'home help Yeadon' or 'companion care Leeds'.",
+      "biggestGap": "Everything sits on one page, so there are no dedicated pages to rank for individual services (senior care, mobility support, family concierge) or areas (Yeadon, Horsforth, Guiseley, Rawdon)."
+    },
+    "geo": {
+      "score": 47,
+      "grade": "D",
+      "summary": "AI assistants like ChatGPT, Perplexity and Google AI Overviews can read the page, but there is little they can quote. There are no FAQs, no prices, no named team members, no reviews and no address, and the business schema is labelled as a construction business. Without these, an AI is unlikely to recommend Home Not Alone when someone asks for home help in Leeds.",
+      "biggestGap": "No question-and-answer content (what's covered, cost, areas served, how to start) that AI engines can lift directly into answers."
+    },
+    "accessibility": {
+      "score": 93,
+      "grade": "A",
+      "wcagLevel": "AA",
+      "summary": "Automated checks found no WCAG A or AA failures. Text contrast passes, every image has alt text, and the page language is set. The remaining issues are structural: there is no <main> landmark, the navigation menu disappears completely on phones, and one alt text has a typo. A manual check with a keyboard and screen reader is still recommended.",
+      "biggestGap": "The main navigation is hidden on mobile with no menu button, so phone users (most visitors) can't jump to Services, About or Contact."
+    }
+  },
+
+  "categoryScores": {
+    "technical": 62,
+    "content": 48,
+    "onPage": 58,
+    "schema": 55,
+    "performance": 50,
+    "aiSearch": 42,
+    "images": 55
+  },
+
+  "vitals": {
+    "lcp": { "value": 9.3, "unit": "s", "status": "poor" },
+    "inp": { "value": 230, "unit": "ms", "status": "needs-improvement" },
+    "cls": { "value": 0.00, "unit": "", "status": "good" },
+    "ttfb": { "value": 433, "unit": "ms", "status": "good" },
+    "overallScore": 58,
+    "pageWeightBytes": 1921643
+  },
+
+  "accessibilityFindings": {
+    "wcagLevel": "AA",
+    "score": 93,
+    "scoredByApify": false,
+    "apifyViolationCount": 0,
+    "apifyPassesCount": 0,
+    "apifyViolations": [
+      {
+        "id": "landmark-one-main",
+        "priority": "medium",
+        "category": "accessibility",
+        "title": "Page has no main content landmark",
+        "detail": "There is no <main> element, so screen-reader users can't jump straight past the header to the content. Flagged by Lighthouse/axe-core as a best-practice failure. It also supports WCAG 2.4.1 Bypass Blocks.",
+        "wcagCriteria": ["Best practice", "Supports WCAG 2.4.1 (Level A)"],
+        "affectedElements": 1,
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-one-main"
+      },
+      {
+        "id": "mobile-nav-missing",
+        "priority": "medium",
+        "category": "accessibility",
+        "title": "Navigation menu hidden on mobile with no alternative",
+        "detail": "The menu uses 'hidden lg:flex', so it is removed below 1024px wide and there is no hamburger button to replace it. Phone and tablet users can't reach Services, About or Contact except by scrolling. Found by manual review.",
+        "wcagCriteria": ["Usability", "Related to WCAG 2.4.5 Multiple Ways (Level AA)"],
+        "affectedElements": 1,
+        "helpUrl": "https://www.w3.org/WAI/tutorials/menus/flyout/"
+      },
+      {
+        "id": "image-alt-quality",
+        "priority": "low",
+        "category": "accessibility",
+        "title": "Hero image alt text has a typo",
+        "detail": "The hero image alt reads \"Elerly woman's hands.\" Screen readers will mispronounce it. Found by manual review.",
+        "wcagCriteria": ["WCAG 1.1.1 Non-text Content (Level A) — quality"],
+        "affectedElements": 1,
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/image-alt"
+      }
+    ],
+    "imagesWithoutAlt": 0,
+    "zoomDisabled": false,
+    "hasLang": true
+  },
+
+  "summary": {
+    "headline": "A warm, nicely designed site that is holding the business back. One page, a 9-second mobile load, and no address, reviews or prices mean Google and AI assistants have little reason to recommend it.",
+    "topIssues": [
+      "Mobile pages take 9.3s to show the main content (LCP), caused by the Tailwind CDN script and about 1MB of oversized images",
+      "Google Ads tracking loads before visitors give cookie consent, and there is no privacy policy, which is a UK GDPR/PECR compliance risk",
+      "The whole site is one page, so there are no separate service or area pages to rank for 'home help Yeadon', 'companion care Horsforth' and similar searches",
+      "No business address, Google Business Profile link, reviews or named carers, which are weak trust signals for a care business that families need to trust",
+      "The schema labels the business a 'HomeAndConstructionBusiness' and has no address or opening hours"
+    ],
+    "quickWins": [
+      "Add a robots.txt and sitemap.xml and submit the sitemap in Google Search Console",
+      "Fix the schema type (use LocalBusiness instead of HomeAndConstructionBusiness) and add an address, opening hours and sameAs links",
+      "Resize the 205KB logo PNG to a 220px-wide WebP or SVG (saves about 200KB)",
+      "Shorten the meta description to under 155 characters and mention Yeadon in the on-page text",
+      "Wrap the content in a <main> element and add a mobile menu button"
+    ]
+  },
+
+  "issues": [
+    {
+      "priority": "critical",
+      "category": "technical",
+      "title": "Google Ads tag fires without cookie consent and there's no privacy policy",
+      "detail": "The gtag.js Google Ads tag (AW-10848338053) loads on every visit before any consent is given, and the site has no cookie banner or privacy policy. Under UK PECR and UK GDPR, non-essential cookies need prior consent. Google also requires Consent Mode v2 for UK/EEA ad measurement, so conversion tracking may be under-reporting.",
+      "fixSteps": ["Add a consent management platform (e.g. Cookiebot, CookieYes or Klaro) that is Google Consent Mode v2 certified", "Set gtag consent defaults to 'denied' before the config call and update them on acceptance", "Publish a privacy policy page covering the contact data, Google Ads and how to contact the data controller, and link it from the footer"],
+      "estimatedTime": "2-3 hours",
+      "difficulty": "medium"
+    },
+    {
+      "priority": "critical",
+      "category": "performance",
+      "title": "Mobile Largest Contentful Paint is 9.3 seconds",
+      "detail": "Google's 'good' threshold is 2.5s. Lighthouse mobile performance is 58/100. The main cause is the Tailwind Play CDN script (407KB), which builds the CSS in the browser and blocks rendering, adding 3.4s of render delay on its own. On a slow phone connection, many older visitors and their families will leave before the page appears.",
+      "fixSteps": ["Replace the cdn.tailwindcss.com script with a compiled, purged Tailwind CSS file (Tailwind CLI: npx tailwindcss -o styles.css --minify). It will be about 10-15KB", "Remove the unused Ubuntu and Oswald Google Font stylesheets", "Preload the hero image (uploads/home3.webp) with <link rel=\"preload\" as=\"image\" fetchpriority=\"high\">", "Re-test in PageSpeed Insights and aim for LCP under 2.5s"],
+      "estimatedTime": "2-4 hours",
+      "difficulty": "medium"
+    },
+    {
+      "priority": "high",
+      "category": "content",
+      "title": "Single-page site, with no service or location pages",
+      "detail": "All content is on one URL with anchor links (#services, #about). Google ranks pages, not sections, so the site has one chance to rank for dozens of different searches. Competitors with a dedicated 'Companionship care in Horsforth' or 'Help for elderly parents in Leeds' page will outrank it.",
+      "fixSteps": ["Create a page for each service: Senior Home Help, Limited Mobility Support, Family Concierge, Transport & Errands, Admin & Household Management", "Create 3-5 genuine area pages (Yeadon, Horsforth, Guiseley, Rawdon, Otley) with local details, not copy-and-paste text", "Give each page its own title, meta description, H1, FAQ and contact call to action", "Link them from the navigation and footer"],
+      "estimatedTime": "1-2 days",
+      "difficulty": "medium"
+    },
+    {
+      "priority": "high",
+      "category": "content",
+      "title": "Weak trust signals (E-E-A-T) for a care business",
+      "detail": "There is no address, founder or carer names, photos of the real team, DBS-check or insurance statement, reviews, years in business or pricing guidance. The contact email is a Gmail address. Families choosing someone to come into a vulnerable relative's home look for these signals, and so do Google's quality guidelines.",
+      "fixSteps": ["Add a 'Meet the team' section with real names, photos and short bios (experience, DBS-checked, first-aid trained)", "State insurance and DBS status clearly and add any memberships (e.g. Home Care Association, local business groups)", "Embed 3-6 Google reviews or written testimonials with first name and area", "Move to a domain email (hello@homenotalone.co.uk)", "Add an 'Our prices' section or a 'from £X/hour' guide"],
+      "estimatedTime": "half a day",
+      "difficulty": "easy"
+    },
+    {
+      "priority": "high",
+      "category": "images",
+      "title": "Images are about 1MB larger than needed",
+      "detail": "Lighthouse estimates 1,086KB of savings. The logo is a 205KB PNG shown at 110x48px. home6.webp is 434KB. None of the images use responsive srcset or lazy loading, so mobile users download desktop-sized photos.",
+      "fixSteps": ["Convert the logo to SVG, or a 220x96 WebP (under 10KB), and add width/height attributes", "Export each photo at 2 sizes (e.g. 800w and 1600w) and use srcset/sizes", "Add loading=\"lazy\" decoding=\"async\" to every image below the hero", "Compress the WebPs at quality 75-80"],
+      "estimatedTime": "1-2 hours",
+      "difficulty": "easy"
+    },
+    {
+      "priority": "high",
+      "category": "schema",
+      "title": "Schema uses the wrong business type and is missing an address",
+      "detail": "The JSON-LD declares HomeAndConstructionBusiness, which is the type for builders, plumbers and electricians, not care services. It also has no address, geo coordinates, opening hours or sameAs links. Google can't connect the site to a Google Business Profile, and local pack eligibility is weakened.",
+      "fixSteps": ["Change @type to \"LocalBusiness\" (optionally with an additionalType pointing to a care/concierge concept)", "Add a PostalAddress (at least locality Yeadon, region West Yorkshire, postal code LS19, country GB) and geo coordinates", "Add openingHoursSpecification and sameAs (Google Business Profile, Facebook)", "Validate at validator.schema.org and Google's Rich Results Test"],
+      "estimatedTime": "45 minutes",
+      "difficulty": "easy"
+    },
+    {
+      "priority": "high",
+      "category": "technical",
+      "title": "No robots.txt or XML sitemap",
+      "detail": "/robots.txt and /sitemap.xml both return 404. Crawling still works by default, but the site gives search engines no sitemap to discover pages. This matters once service and area pages are added.",
+      "fixSteps": ["Add robots.txt with 'User-agent: *', 'Allow: /' and 'Sitemap: https://homenotalone.co.uk/sitemap.xml'", "Create sitemap.xml listing every page with lastmod dates", "Submit it in Google Search Console and Bing Webmaster Tools"],
+      "estimatedTime": "20 minutes",
+      "difficulty": "easy"
+    },
+    {
+      "priority": "medium",
+      "category": "accessibility",
+      "title": "Navigation disappears on mobile",
+      "detail": "The nav list is hidden below the lg breakpoint and there is no menu toggle. Mobile visitors only get the 'Get in Touch' button and can't jump to Services or About.",
+      "fixSteps": ["Add a hamburger <button> with aria-expanded and aria-controls", "Show the menu as a dropdown panel on small screens", "Make sure the menu can be opened and closed with the keyboard and with Escape"],
+      "estimatedTime": "1 hour",
+      "difficulty": "easy"
+    },
+    {
+      "priority": "medium",
+      "category": "onPage",
+      "title": "Yeadon isn't mentioned in the page content, and the meta description is too long",
+      "detail": "The title and meta tags target Yeadon, but the visible text only says 'Leeds North West'. The meta description is about 210 characters and Google will cut it off around 155. The meta keywords tag is ignored by Google.",
+      "fixSteps": ["Mention Yeadon and nearby areas (Rawdon, Guiseley, Horsforth) naturally in the hero and About text", "Rewrite the meta description to under 155 characters with a call to action", "Remove the meta keywords tag"],
+      "estimatedTime": "30 minutes",
+      "difficulty": "easy"
+    },
+    {
+      "priority": "medium",
+      "category": "aiSearch",
+      "title": "No FAQ or answer-ready content for AI search",
+      "detail": "AI Overviews, ChatGPT and Perplexity prefer to quote short, self-contained answers to specific questions. The page is written as marketing prose with no questions, prices or specifics, so there's little for them to cite.",
+      "fixSteps": ["Add an FAQ section: What does a home help do? How much does it cost? Which areas do you cover? Are your staff DBS checked? Do you provide personal care? How do I get started?", "Answer each in 40-80 words with concrete facts", "Mark it up with FAQPage schema", "Add an llms.txt summarising services, areas, prices and contact details"],
+      "estimatedTime": "2 hours",
+      "difficulty": "easy"
+    },
+    {
+      "priority": "medium",
+      "category": "technical",
+      "title": "Missing security headers",
+      "detail": "HSTS is set, but Content-Security-Policy, X-Content-Type-Options, X-Frame-Options/frame-ancestors, Referrer-Policy and Permissions-Policy are missing. They are easy to add on Netlify and help prevent clickjacking and content-sniffing attacks.",
+      "fixSteps": ["Create a _headers file (or [[headers]] in netlify.toml)", "Add X-Content-Type-Options: nosniff, Referrer-Policy: strict-origin-when-cross-origin, X-Frame-Options: DENY, Permissions-Policy", "Add a CSP once Tailwind is no longer loaded from the CDN"],
+      "estimatedTime": "30 minutes",
+      "difficulty": "easy"
+    },
+    {
+      "priority": "medium",
+      "category": "accessibility",
+      "title": "No <main> landmark",
+      "detail": "Lighthouse/axe flags 'Document does not have a main landmark'. Screen-reader users rely on it to skip to the content.",
+      "fixSteps": ["Wrap all sections between <header> and <footer> in <main id=\"main\">", "Add a visually hidden 'Skip to content' link as the first element in <body>"],
+      "estimatedTime": "15 minutes",
+      "difficulty": "easy"
+    },
+    {
+      "priority": "low",
+      "category": "technical",
+      "title": "No favicon or apple-touch-icon",
+      "detail": "/favicon.ico returns 404 and no icon is declared. Google shows favicons next to mobile search results, so without one the listing looks less trustworthy.",
+      "fixSteps": ["Create a 48x48+ favicon from the heart logo mark", "Add <link rel=\"icon\"> and <link rel=\"apple-touch-icon\"> tags"],
+      "estimatedTime": "15 minutes",
+      "difficulty": "easy"
+    },
+    {
+      "priority": "low",
+      "category": "content",
+      "title": "Copy has grammar slips",
+      "detail": "Examples: 'we adapt a lot of our services' (awkward phrasing), 'Guaranteeing that we can be the Home Help that can please you', 'Elerly woman's hands' (alt text), and 'non medical' should be 'non-medical'. Small errors weaken trust with careful readers.",
+      "fixSteps": ["Proofread all copy", "Fix the alt text typo", "Rewrite the Welcome paragraph more concretely"],
+      "estimatedTime": "30 minutes",
+      "difficulty": "easy"
+    },
+    {
+      "priority": "low",
+      "category": "aiSearch",
+      "title": "Open Graph and Twitter Card tags are incomplete",
+      "detail": "og:url, og:site_name and the twitter:card tags are missing, and og:image is the logo rather than a 1200x630 share image. Links shared on WhatsApp and Facebook (a common way families pass on recommendations) will look plain.",
+      "fixSteps": ["Create a 1200x630 share image with a photo and the logo", "Add og:url, og:site_name, twitter:card=summary_large_image"],
+      "estimatedTime": "30 minutes",
+      "difficulty": "easy"
+    }
+  ],
+
+  "checklist": [
+    { "id": "cookie-consent-privacy", "priority": "critical", "category": "technical", "title": "Add cookie consent (Consent Mode v2) and a privacy policy", "detail": "1. Install a Consent Mode v2 certified CMP. 2. Set gtag consent defaults to denied. 3. Publish a privacy policy and link it in the footer.", "fixSteps": ["Install CMP", "Set consent defaults", "Publish privacy policy"], "estimatedTime": "2-3 hours", "difficulty": "medium", "completed": false },
+    { "id": "replace-tailwind-cdn", "priority": "critical", "category": "performance", "title": "Replace Tailwind CDN with compiled CSS", "detail": "1. Run the Tailwind CLI with the existing config to produce a minified CSS file. 2. Remove the cdn.tailwindcss.com script and inline config. 3. Link the CSS file in <head>.", "fixSteps": ["Build CSS with Tailwind CLI", "Remove CDN script", "Link compiled CSS"], "estimatedTime": "1-2 hours", "difficulty": "medium", "completed": false },
+    { "id": "remove-unused-fonts", "priority": "high", "category": "performance", "title": "Remove unused Ubuntu and Oswald font stylesheets", "detail": "1. Delete the gfont-Ubuntu and gfont-Oswald <link> tags. 2. Re-test LCP.", "fixSteps": ["Delete the two font links", "Re-test"], "estimatedTime": "5 minutes", "difficulty": "easy", "completed": false },
+    { "id": "optimise-images", "priority": "high", "category": "images", "title": "Resize and lazy-load images", "detail": "1. Replace the 205KB logo PNG with SVG or a small WebP. 2. Generate 800w/1600w versions of each photo. 3. Add srcset, sizes, width/height and loading=lazy below the fold. 4. Preload the hero image.", "fixSteps": ["Optimise logo", "Responsive photo sizes", "Lazy load", "Preload hero"], "estimatedTime": "1-2 hours", "difficulty": "easy", "completed": false },
+    { "id": "fix-localbusiness-schema", "priority": "high", "category": "schema", "title": "Fix the LocalBusiness schema", "detail": "1. Change @type to LocalBusiness. 2. Add address, geo, openingHoursSpecification, sameAs. 3. Validate.", "fixSteps": ["Change type", "Add address/geo/hours/sameAs", "Validate"], "estimatedTime": "45 minutes", "difficulty": "easy", "completed": false },
+    { "id": "robots-sitemap", "priority": "high", "category": "technical", "title": "Add robots.txt and sitemap.xml, then submit to Search Console", "detail": "1. Create robots.txt with a Sitemap line. 2. Create sitemap.xml. 3. Verify the site in Google Search Console and Bing Webmaster Tools and submit the sitemap.", "fixSteps": ["robots.txt", "sitemap.xml", "Submit"], "estimatedTime": "30 minutes", "difficulty": "easy", "completed": false },
+    { "id": "google-business-profile", "priority": "high", "category": "onPage", "title": "Claim/optimise the Google Business Profile and link it", "detail": "1. Claim or verify the Google Business Profile as a service-area business covering Yeadon/LS19 and nearby areas. 2. Add services, photos and the website. 3. Ask existing clients for reviews. 4. Link the profile from the site and the schema sameAs.", "fixSteps": ["Claim GBP", "Complete profile", "Request reviews", "Link from site"], "estimatedTime": "2 hours", "difficulty": "easy", "completed": false },
+    { "id": "trust-signals", "priority": "high", "category": "content", "title": "Add team, DBS/insurance, reviews and pricing guide", "detail": "1. Add a Meet the Team section with names and photos. 2. State DBS and insurance status. 3. Add testimonials. 4. Add 'from £X/hour' pricing. 5. Switch to a domain email.", "fixSteps": ["Team section", "DBS/insurance", "Testimonials", "Pricing", "Domain email"], "estimatedTime": "half a day", "difficulty": "easy", "completed": false },
+    { "id": "service-pages", "priority": "high", "category": "content", "title": "Build individual service pages", "detail": "1. Create pages for each core service with 500+ words, an FAQ and a call to action. 2. Add them to the navigation and sitemap.", "fixSteps": ["Write service pages", "Link in nav", "Add to sitemap"], "estimatedTime": "1 day", "difficulty": "medium", "completed": false },
+    { "id": "area-pages", "priority": "medium", "category": "content", "title": "Build 3-5 local area pages", "detail": "1. Pick the main areas served (Yeadon, Rawdon, Guiseley, Horsforth, Otley). 2. Write unique content for each covering local landmarks, travel and relevant services. 3. Link them from the footer.", "fixSteps": ["Choose areas", "Write unique content", "Link from footer"], "estimatedTime": "1 day", "difficulty": "medium", "completed": false },
+    { "id": "faq-section", "priority": "medium", "category": "aiSearch", "title": "Add an FAQ section with FAQPage schema", "detail": "1. Write 6-8 real customer questions with 40-80 word answers. 2. Add FAQPage JSON-LD.", "fixSteps": ["Write FAQs", "Add schema"], "estimatedTime": "2 hours", "difficulty": "easy", "completed": false },
+    { "id": "llms-txt", "priority": "medium", "category": "aiSearch", "title": "Publish /llms.txt", "detail": "1. Write a markdown summary of the business, services, areas, prices and contact details. 2. Deploy it at /llms.txt.", "fixSteps": ["Write llms.txt", "Deploy"], "estimatedTime": "20 minutes", "difficulty": "easy", "completed": false },
+    { "id": "mobile-nav", "priority": "medium", "category": "accessibility", "title": "Add an accessible mobile menu", "detail": "1. Add a toggle button with aria-expanded. 2. Show the nav links in a panel on small screens. 3. Support the keyboard and Escape.", "fixSteps": ["Toggle button", "Mobile panel", "Keyboard support"], "estimatedTime": "1 hour", "difficulty": "easy", "completed": false },
+    { "id": "main-landmark", "priority": "medium", "category": "accessibility", "title": "Add <main> landmark and skip link", "detail": "1. Wrap the content sections in <main id=\"main\">. 2. Add a 'Skip to content' link.", "fixSteps": ["Add main", "Add skip link"], "estimatedTime": "15 minutes", "difficulty": "easy", "completed": false },
+    { "id": "meta-onpage", "priority": "medium", "category": "onPage", "title": "Tighten the meta description and add local terms to the copy", "detail": "1. Rewrite the meta description to under 155 characters. 2. Mention Yeadon and nearby areas in the body copy. 3. Remove meta keywords.", "fixSteps": ["Meta description", "Local terms", "Remove keywords tag"], "estimatedTime": "30 minutes", "difficulty": "easy", "completed": false },
+    { "id": "security-headers", "priority": "medium", "category": "technical", "title": "Add security headers via Netlify _headers", "detail": "1. Add nosniff, Referrer-Policy, X-Frame-Options and Permissions-Policy. 2. Add a CSP after the CDN is removed.", "fixSteps": ["_headers file", "CSP"], "estimatedTime": "30 minutes", "difficulty": "easy", "completed": false },
+    { "id": "favicon", "priority": "low", "category": "technical", "title": "Add a favicon and apple-touch-icon", "detail": "1. Export the heart mark at 48, 180 and 512px. 2. Add the link tags.", "fixSteps": ["Export icons", "Add link tags"], "estimatedTime": "15 minutes", "difficulty": "easy", "completed": false },
+    { "id": "og-tags", "priority": "low", "category": "aiSearch", "title": "Complete the Open Graph / Twitter Card tags", "detail": "1. Create a 1200x630 share image. 2. Add og:url, og:site_name and twitter:card.", "fixSteps": ["Share image", "Add tags"], "estimatedTime": "30 minutes", "difficulty": "easy", "completed": false },
+    { "id": "proofread", "priority": "low", "category": "content", "title": "Proofread copy and fix the alt text typo", "detail": "1. Fix 'Elerly'. 2. Tidy the Welcome and Contact paragraphs. 3. Hyphenate 'non-medical' consistently.", "fixSteps": ["Fix typo", "Tidy copy"], "estimatedTime": "30 minutes", "difficulty": "easy", "completed": false }
+  ],
+
+  "quickWins": [
+    { "title": "Delete two unused font stylesheets", "detail": "The Ubuntu and Oswald Google Fonts are loaded but never used. Removing them cuts two render-blocking requests.", "estimatedTime": "5 minutes", "category": "performance" },
+    { "title": "Add robots.txt and sitemap.xml", "detail": "Both return 404 today. Add them and submit the sitemap in Google Search Console so Google discovers new pages quickly.", "estimatedTime": "20 minutes", "category": "technical" },
+    { "title": "Fix the schema business type and add an address", "detail": "Change HomeAndConstructionBusiness to LocalBusiness and add an LS19 address, opening hours and sameAs links. This helps Google connect the site to the local map pack.", "estimatedTime": "45 minutes", "category": "schema" },
+    { "title": "Shrink the logo", "detail": "A 205KB PNG is displayed at 110x48px. An SVG or small WebP saves about 200KB on every page view.", "estimatedTime": "15 minutes", "category": "images" },
+    { "title": "Add <main> and a mobile menu button", "detail": "This fixes the one Lighthouse accessibility failure and lets phone users navigate the page.", "estimatedTime": "1 hour", "category": "accessibility" }
+  ]
+}
